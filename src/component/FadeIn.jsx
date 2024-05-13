@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import AnimatedList from "./AnimatedList";
 import Button from "./Button";
 
+
 const FadeIn = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -37,13 +38,8 @@ const FadeIn = () => {
         <AnimatedList open={open} />
 
       </div>
-      <div style={{padding:"2rem 1rem"}}>
-        <h2>My Blog</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nulla libero quia, eaque tempora nihil repellat molestiae blanditiis nostrum qui omnis sequi dolore mollitia natus reiciendis impedit voluptatem animi quibusdam? Nisi maxime asperiores harum! Perferendis magni odit animi totam nobis.
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, corrupti. Ea assumenda deleniti dolore magni!</p>
-        </div>
       <Button/>
+      
     </>
   );
 };

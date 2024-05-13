@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='fade-in'>
       <div className='fade-in-content'>
-      <FadeIn />
+        <FadeIn />
       </div>
     </div>
   )
