@@ -1,0 +1,89 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: fff;
+  overflow-y: hidden !important;;
+}
+.fade-in {
+  padding: 2rem;
+  height: 90vh;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.fade-in-content {
+  animation: fadeIn2 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; background-color: black;}
+  to { opacity: 1;  background-color: #fff; }
+}
+@keyframes fadeIn2 {
+  from { opacity: 0; color: transparent;}
+  to { opacity: 1;  color: #000; }
+}
+
+.navItems{
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(to right, #32f6f6, #a6a79f);
+  cursor: pointer; /* Maintain accessibility for clickable elements */
+}
+
+.animated {
+  animation: combinedRotate 1s ease-in-out; /* Adjust animation duration and timing */
+  
+}
+
+
+@keyframes combinedRotate {
+  from { transform: rotate(0deg); }
+  50% { transform: rotate(360deg); } /* First rotation */
+  to { transform: rotate(-360deg); } /* Second rotation */
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 2rem;
+  padding: 7rem 2rem 0;
+  left: -100%;
+  width: 150px; /* Adjust sidebar width as needed */
+  height: 100vh; /* Full viewport height */
+  background-color: grey; /* Sidebar background color */
+  transition: all 1s ease-in-out; /* Animation for slide-in effect */
+}
+
+.open{
+  left: -2rem;
+  top: -5rem;
+  padding-top: 7rem;
+}
+
+@media only screen and (max-width: 768px){
+  .fade-in{
+    padding: 10px;
+  }
+  .sidebar{
+    left: -100%;
+    top: -6rem;
+    padding-top: 10rem;
+  }
+  .open{
+    left: -1rem;
+  }
+}
